@@ -51,6 +51,9 @@ def longestCommonSubsequence(str1, str2):
     The entries of the LCS Table will be computed in row-major order
     """
     lcsTable = np.zeros(shape=(len1, len2)).astype(int)
+    
+    # lcsTable = [[0]*len2 for i in range(len1)] for sites that don't support the utilization of numpy library
+    # indexing will be lcsTable[i][j] rather than lcsTable[i, j]
 
     """
     The outer iteration starts at 1 till len1 is reached
