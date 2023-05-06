@@ -22,7 +22,7 @@ def getLcsString(lcsTable, str1, i, j):
         global lcsString
         # once it returns, the character will be present in the lcs string, so append it
         lcsString += str1[i-1]
-    # elenment [i, j] is equal to top element [i-1, j]
+    # element [i, j] is equal to top element [i-1, j]
     elif lcsTable[i, j] == lcsTable[i-1, j]:
         getLcsString(lcsTable, str1, i-1, j)
     else:
@@ -51,7 +51,7 @@ def longestCommonSubsequence(str1, str2):
     The entries of the LCS Table will be computed in row-major order
     """
     lcsTable = np.zeros(shape=(len1, len2)).astype(int)
-    
+
     # lcsTable = [[0]*len2 for i in range(len1)] for sites that don't support the utilization of numpy library
     # indexing will be lcsTable[i][j] rather than lcsTable[i, j]
 
